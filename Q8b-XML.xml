@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="./Q10a-XML.css" type="text/css"?>
+<!DOCTYPE stock [
+
+<!-- Racine -->
+<!ELEMENT stock (categorie+)>
+
+<!-- Catégorie -->
+<!ELEMENT categorie (glossaire?, produit*)>
+<!ATTLIST categorie id_cat CDATA #REQUIRED
+                        lib_cat CDATA #REQUIRED>
+
+<!-- Glossaire -->
+<!ELEMENT glossaire (mot+)>
+<!ATTLIST glossaire auteur CDATA #IMPLIED>
+<!ELEMENT mot (#PCDATA)>
+<!ATTLIST mot def CDATA #REQUIRED>
+
+<!-- Produit -->
+<!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro) >
+<!ATTLIST produit id_prod CDATA #REQUIRED>
+<!ELEMENT nom_prod (#PCDATA | glossaire)*>
+<!ELEMENT descri_prod (#PCDATA | glossaire)*>
+<!ELEMENT prix_achat_prod (#PCDATA)>
+<!ELEMENT prix_vente_prod (#PCDATA)>
+<!ELEMENT qte_stock (#PCDATA)>
+<!ELEMENT date_peremption (#PCDATA)>
+<!ELEMENT date_appro (#PCDATA)>
+
+] >
+
+<!-- XML Schema -->
+<!-- Ecrire le document XML juste ici... -->

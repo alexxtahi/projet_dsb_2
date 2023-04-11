@@ -1,0 +1,36 @@
+stock {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+
+categorie {
+    display: flex;
+    flex-direction: column;
+}
+
+categorie::before {
+    content: "Catégorie "attr(lib_cat);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+glossaire {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    color: #666666;
+}
+
+produit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+produit nom_prod {
+    font-weight: bold;
+    text-transform: uppercase;
+}
