@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- HTML root tag -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Gestion des stocks</title>
+    <link rel="stylesheet" href="./Q10b-HTML.css" type="text/css" />
+</head>
+
+<body>
+    <div class="header">
+        <img class="header-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+            alt="Icone de cartons" />
+        <h2>Gestion <br /> des stocks</h2>
+    </div>
+    <!-- Description des entités -->
+    <div class="description-group">
+        <h1>Description des entités</h1>
+        <img src="./img/mcd.png" alt="Image du MCD">
+        <div class="entity-description-group">
+            <!-- Catégorie -->
+            <div class="entity-description">
+                <h2>Catégorie</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Produit -->
+            <div class="entity-description">
+                <h2>Produit</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Client -->
+            <div class="entity-description">
+                <h2>Client</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Fournisseur -->
+            <div class="entity-description">
+                <h2>Fournisseur</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Promotion -->
+            <div class="entity-description">
+                <h2>Promotion</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Don -->
+            <div class="entity-description">
+                <h2>Don</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Association -->
+            <div class="entity-description">
+                <h2>Association</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attributs</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id_cat<span>*</span></td>
+                            <td>INT</td>
+                            <td>20</td>
+                            <td>Clé primaire</td>
+                        </tr>
+                        <tr>
+                            <td>lib_cat</td>
+                            <td>VARCHAR</td>
+                            <td>100</td>
+                            <td>Libellé de la catégorie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div>
+            <div class="footer-title">
+                <img class="footer-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+                    alt="Icone de cartons" />
+                <h1>Gestion <br /> des stocks</h1>
+            </div>
+            <h3 class="footer-subtitle">Réalisé par <span>DIENG Yama Dior</span> et <span>TAHI Ezan</span></h3>
+        </div>
+        <div class="footer-elem">
+            <h2>Liens utiles</h2>
+            <ul>
+                <li><a href="./Q7-DTD.dtd">Q7-DTD.dtd</a></li>
+                <li><a href="./Q8a-XML.xml">Q8a-XML.xml</a></li>
+                <li><a href="./Q8b-XML.xml">Q8b-XML.xml</a></li>
+                <li><a href="https://validator.w3.org/">Validation XHTML</a></li>
+                <li><a href="https://jigsaw.w3.org/css-validator/">Validation CSS</a></li>
+            </ul>
+        </div>
+        <div class="footer-elem">
+            <h2>Mots de fin</h2>
+            <p>
+                Merci d'avoir visiter la page de présentation de notre projet DSB partie 2.
+            </p>
+        </div>
+        <img class="footer-retail-icon-2" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+            alt="Icone de cartons" />
+    </footer>
+</body>
+
+</html>
