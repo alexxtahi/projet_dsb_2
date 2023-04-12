@@ -31,8 +31,8 @@
 
 <!-- XML Schema -->
 <stock>
-<categorie id_cat="5" lib_cat="cosmetique" >
-<produit id_prod="2">
+    <categorie id_cat="5" lib_cat="cosmetique">
+        <produit id_prod="2">
             <nom_prod>savon chat </nom_prod>
             <descri_prod>
                 savon de bébé
@@ -43,13 +43,13 @@
             <date_peremption>02/12/2029</date_peremption>
             <date_appro>22/06/2023</date_appro>
         </produit>
-<produit id_prod="4">
+        <produit id_prod="4">
             <nom_prod>crème clean</nom_prod>
             <descri_prod>
                 crème pour le visage et les mains 
                 <glossaire auteur="Yama">
                     <mot def="crème ">crème:mélange d’huiles, d’eau et d’émollients, La consistance est plus épaisse par rapport aux autres options</mot>
-             
+
                 </glossaire>
             </descri_prod>
             <prix_achat_prod>2.99</prix_achat_prod>
@@ -58,19 +58,13 @@
             <date_peremption>04/11/2024</date_peremption>
             <date_appro>01/02/2022</date_appro>
         </produit>
+    </categorie>
+    <categorie id_cat="12" lib_cat="produits surgélés">
 
-</categorie>
-
-<categorie id_cat="12" lib_cat="produits surgélés" >
-
-<glossaire auteur="nini">
-                    <mot def="produits surgélés ">produits surgélés:une grande variété d'aliments qui ont été congelés pour prolonger leur durée de conservation Les produits surgelés peuvent inclure des légumes, des fruits, des viandes
-                </glossaire>
-
-
-
-
-</categorie>
+        <glossaire auteur="nini">
+            <mot def="produits surgélés ">produits surgélés:une grande variété d'aliments qui ont été congelés pour prolonger leur durée de conservation Les produits surgelés peuvent inclure des légumes, des fruits, des viandes
+            </glossaire>
+        </categorie>
 
 
 
@@ -78,4 +72,4 @@
 
 
 
-</stock>
+    </stock>
