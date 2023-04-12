@@ -27,7 +27,15 @@ body {
     flex-direction: column;
 }
 
-.hero h1 {
+.hero-title,
+.footer-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title h1,
+.footer-title h1 {
     text-transform: uppercase;
     font: bold 5vw 'Engage';
     color: white;
@@ -35,13 +43,13 @@ body {
     margin: 0;
 }
 
-.hero-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-title h1 {
+    font-size: 30px;
 }
 
-.retail-icon {
+.hero-retail-icon,
+.footer-retail-icon,
+.footer-retail-icon-2 {
     width: 13vw;
     height: 13vw;
     object-fit: contain;
@@ -49,8 +57,23 @@ body {
     filter: invert(100%) drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
+.footer-retail-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.footer-retail-icon-2 {
+    width: 14vw;
+    height: 14vw;
+    opacity: 0.05;
+    position: absolute;
+    right: 0px;
+}
+
 .hero-subtitle,
-.hero-subtitle span {
+.footer-subtitle,
+.hero-subtitle span,
+.footer-subtitle span {
     font: normal 3vw 'BebasNeue';
     font-weight: normal;
     color: rgb(200, 200, 200);
@@ -58,8 +81,15 @@ body {
     margin: 0;
 }
 
-.hero-subtitle span {
+.hero-subtitle span,
+.footer-subtitle span {
     color: white;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.footer-subtitle,
+.footer-subtitle span {
+    font-size: 20px;
 }
 
 .slide-to-bottom-box {
@@ -105,6 +135,15 @@ body {
     margin-bottom: 30px;
 }
 
+.description-group h1::before {
+    content: " ";
+    display: inline-block;
+    width: 8px;
+    height: 40px;
+    background-color: gold;
+    margin-right: 10px;
+}
+
 .description-group p {
     font: normal 22px 'Arial';
     text-align: justify;
@@ -133,14 +172,13 @@ body {
 .key-elem img {
     object-fit: cover;
     width: 100%;
-    aspect-ratio: 1;
-    /* border-radius: 10px; */
+    aspect-ratio: 1/1;
     box-shadow: 7px 7px 0px gold;
 }
 
 .key-elem h3 {
     font: normal 22px 'BebasNeue';
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -192,8 +230,50 @@ body {
 }
 
 footer {
-    padding: 15px;
-    width: 100%;
-    background-color: gray;
+    width: 96vw;
+    padding: 40px 2vw;
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Arial';
     display: flex;
+    justify-content: start;
+}
+
+.footer-elem {
+    min-width: 15%;
+    max-width: 30%;
+    margin-left: 5%;
+}
+
+.footer-elem h2 {
+    font-family: 'BebasNeue';
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.footer-elem h2::before {
+    content: " ";
+    display: inline-block;
+    width: 5px;
+    height: 17px;
+    background-color: gold;
+    margin-right: 5px;
+}
+
+.footer-elem ul {
+    padding-left: 15px;
+}
+
+.footer-elem a {
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+}
+
+.footer-elem a:hover {
+    color: black;
+    font-weight: bold;
+    background-color: gold;
+    padding: 0 5px;
 }
