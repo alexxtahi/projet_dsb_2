@@ -30,4 +30,26 @@
 ] >
 
 <!-- XML Schema -->
-<!-- Ecrire le document XML juste ici... -->
+<stock>
+<categorie id_cat="5" lib_cat="cosmetique" >
+<produit id_prod="2">
+            <nom_prod>savon chat </nom_prod>
+            <descri_prod>
+                savon de bébé
+            </descri_prod>
+            <prix_achat_prod>20.34</prix_achat_prod>
+            <prix_vente_prod>55</prix_vente_prod>
+            <qte_stock>200</qte_stock>
+            <date_peremption>02/12/2029</date_peremption>
+            <date_appro>22/06/2023</date_appro>
+        </produit>
+
+</categorie>
+
+
+
+
+
+
+
+</stock>
