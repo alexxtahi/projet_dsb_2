@@ -3,12 +3,12 @@
 <!DOCTYPE stock [
 
 <!-- Racine -->
-<!ELEMENT stock (categorie+)>
+<!ELEMENT stock (glossaire?, categorie+)>
 
 <!-- Catégorie -->
-<!ELEMENT categorie (glossaire?, produit*)>
+<!ELEMENT categorie (produit*)>
 <!ATTLIST categorie id_cat CDATA #REQUIRED
-                        lib_cat CDATA #REQUIRED>
+                    lib_cat CDATA #REQUIRED>
 
 <!-- Glossaire -->
 <!ELEMENT glossaire (mot+)>
@@ -17,7 +17,7 @@
 <!ATTLIST mot def CDATA #REQUIRED>
 
 <!-- Produit -->
-<!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro) >
+<!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro)>
 <!ATTLIST produit id_prod CDATA #REQUIRED>
 <!ELEMENT nom_prod (#PCDATA | glossaire)*>
 <!ELEMENT descri_prod (#PCDATA | glossaire)*>

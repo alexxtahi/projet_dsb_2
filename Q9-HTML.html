@@ -203,11 +203,62 @@
             Ci dessous la série de tests XPath que nous avons réalisé, basée sur les questions posées dans le sujet.
         </p>
         <!-- Tests -->
-        <div></div>
+        <div class="xpath-test-group">
+            <!-- Test a -->
+            <div class="xpath-test">
+                <h3>
+                    <span>a</span> Fournir les contenus des éléments glossaire
+                </h3>
+                <p class="xpath-req">
+                    //glossaire[text()]
+                </p>
+                <img src="./img/mcd.png" alt="" />
+            </div>
+            <!-- Test b -->
+            <div class="xpath-test">
+                <h3>
+                    <span>b</span> Fournir le premier élément glossaire
+                </h3>
+                <p class="xpath-req">
+                    /descendant::glossaire[1]
+                </p>
+                <img src="./img/mcd.png" alt="" />
+            </div>
+            <!-- Test c -->
+            <div class="xpath-test">
+                <h3>
+                    <span>c</span> fournir les éléments glossaire n’ayant pas d’attribut auteur
+                </h3>
+                <p class="xpath-req">
+                    //glossaire[not(@auteur)]
+                </p>
+                <img src="./img/mcd.png" alt="" />
+            </div>
+            <!-- Test d -->
+            <div class="xpath-test">
+                <h3>
+                    <span>d</span> Fournir les valeurs des attributs href
+                </h3>
+                <p class="xpath-req">
+                    //attribute::href
+                </p>
+                <img src="./img/mcd.png" alt="" />
+            </div>
+            <!-- Test e -->
+            <div class="xpath-test">
+                <h3>
+                    <span>e</span> Compter le nombre d’images dans un document XHTML
+                </h3>
+                <p class="xpath-req">
+                    //img[count(self::node())]
+                </p>
+                <img src="./img/mcd.png" alt="" />
+            </div>
+        </div>
 
     </div>
     <!-- Footer -->
-    <footer>
+    <div class="footer">
         <div>
             <div class="footer-title">
                 <img class="footer-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
@@ -234,7 +285,7 @@
         </div>
         <img class="footer-retail-icon-2" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
             alt="Icone de cartons" />
-    </footer>
+    </div>
 </body>
 
 </html>
