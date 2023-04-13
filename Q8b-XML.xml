@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="./Q10a-XML.css" type="text/css"?>
-<!DOCTYPE stock SYSTEM "./Q7-DTD.dtd">
+<!DOCTYPE stock [
+
+<!-- Racine -->
+<!ELEMENT stock (categorie+)>
+
+<!-- Catégorie -->
+<!ELEMENT categorie (glossaire?, produit*)>
+<!ATTLIST categorie id_cat CDATA #REQUIRED
+                        lib_cat CDATA #REQUIRED>
+
+<!-- Glossaire -->
+<!ELEMENT glossaire (mot+)>
+<!ATTLIST glossaire auteur CDATA #IMPLIED>
+<!ELEMENT mot (#PCDATA)>
+<!ATTLIST mot def CDATA #REQUIRED>
+
+<!-- Produit -->
+<!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro) >
+<!ATTLIST produit id_prod CDATA #REQUIRED>
+<!ELEMENT nom_prod (#PCDATA | glossaire)*>
+<!ELEMENT descri_prod (#PCDATA | glossaire)*>
+<!ELEMENT prix_achat_prod (#PCDATA)>
+<!ELEMENT prix_vente_prod (#PCDATA)>
+<!ELEMENT qte_stock (#PCDATA)>
+<!ELEMENT date_peremption (#PCDATA)>
+<!ELEMENT date_appro (#PCDATA)>
+
+] >
 
 <!-- XML Schema -->
-<database>
-    <client id_client="23" >
-       
-            <nom_client>DAGOBERT </nom_client>
-            <prenom_client>DABERT </prenom_client>
-            <sexe_client>M</prenom_client>          
-    </client>
-    <client id_client="30" >
-       
-            <nom_client>DAGET </nom_client>
-            <prenom_client>DERT </prenom_client>
-            <sexe_client>F</prenom_client>          
-    </client>
-
-    <achat id_client="23"  id_produit="16">
-       
-            <qte_acheter>12</qte_acheter>
-            <prix_vente_actuel>55.99</prix_vente_actuel>
-                   
-    </achat>
-    <achat id_client="30"  id_produit="57">
-       
-            <qte_acheter>90</qte_acheter>
-            <prix_vente_actuel>20</prix_vente_actuel>
-         
-    </achat>
+<stock>
+<categorie id_cat="7" lib_cat="Viande" >
+<produit id_prod="3">
+            <nom_prod>Steak haché</nom_prod>
+            <descri_prod>
+              
+            </descri_prod>
+            <prix_achat_prod>9</prix_achat_prod>
+            <prix_vente_prod>13</prix_vente_prod>
+            <qte_stock>200</qte_stock>
+            <date_peremption>03/07/2023</date_peremption>
+            <date_appro>17/02/2023</date_appro>
+        </produit>
 
 
-</database>
+</categorie>
+
+
+</stock>
