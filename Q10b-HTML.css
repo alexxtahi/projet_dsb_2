@@ -363,3 +363,7 @@ footer {
     font-weight: bold;
     color: red;
 }
+
+.entity-elem-group:last-of-type {
+    margin: 0;
+}

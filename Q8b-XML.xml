@@ -60,11 +60,7 @@
         </produit>
     </categorie>
     <categorie id_cat="12" lib_cat="produits surgélés">
-
-        <glossaire auteur="nini">
-            <mot def="produits surgélés ">produits surgélés:une grande variété d'aliments qui ont été congelés pour prolonger leur durée de conservation Les produits surgelés peuvent inclure des légumes, des fruits, des viandes
-            </glossaire>
-        </categorie>
+    </categorie>
 
 
 
@@ -72,4 +68,4 @@
 
 
 
-    </stock>
+</stock>
