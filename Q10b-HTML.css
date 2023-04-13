@@ -63,8 +63,8 @@ body {
 }
 
 .footer-retail-icon-2 {
-    width: 14vw;
-    height: 14vw;
+    width: 170px;
+    height: 170px;
     opacity: 0.05;
     position: absolute;
     right: 0px;
@@ -324,7 +324,7 @@ body {
 
 .header h2 {
     text-transform: uppercase;
-    font: bold 18px 'Engage';
+    font: bolder 18px 'Engage';
     color: black;
     margin: 0;
 }
@@ -392,4 +392,9 @@ body {
     background-color: black;
     color: white;
     box-shadow: 5px 5px 0px gold;
+}
+
+.xpath-test img {
+    width: 60vw;
+    height: auto;
 }

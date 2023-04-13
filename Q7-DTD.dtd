@@ -3,7 +3,7 @@
 
 <!-- Catégorie -->
 <!ELEMENT categorie (produit*)>
-<!ATTLIST categorie id_cat CDATA #REQUIRED
+<!ATTLIST categorie id_cat ID #REQUIRED
                     lib_cat CDATA #REQUIRED>
 
 <!-- Glossaire -->
@@ -14,7 +14,7 @@
 
 <!-- Produit -->
 <!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro)>
-<!ATTLIST produit id_prod CDATA #REQUIRED>
+<!ATTLIST produit id_prod ID #REQUIRED>
 <!ELEMENT nom_prod (#PCDATA | glossaire)*>
 <!ELEMENT descri_prod (#PCDATA | glossaire)*>
 <!ELEMENT prix_achat_prod (#PCDATA)>

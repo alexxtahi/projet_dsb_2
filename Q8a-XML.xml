@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="./Q10a-XML.css" type="text/css"?>
-<!DOCTYPE stock [
-
-<!-- Racine -->
-<!ELEMENT stock (glossaire?, categorie+)>
-
-<!-- Catégorie -->
-<!ELEMENT categorie (produit*)>
-<!ATTLIST categorie id_cat CDATA #REQUIRED
-                    lib_cat CDATA #REQUIRED>
-
-<!-- Glossaire -->
-<!ELEMENT glossaire (mot+)>
-<!ATTLIST glossaire auteur CDATA #IMPLIED>
-<!ELEMENT mot (#PCDATA)>
-<!ATTLIST mot def CDATA #REQUIRED>
-
-<!-- Produit -->
-<!ELEMENT produit (nom_prod, descri_prod, prix_achat_prod, prix_vente_prod, qte_stock, date_peremption, date_appro)>
-<!ATTLIST produit id_prod CDATA #REQUIRED>
-<!ELEMENT nom_prod (#PCDATA | glossaire)*>
-<!ELEMENT descri_prod (#PCDATA | glossaire)*>
-<!ELEMENT prix_achat_prod (#PCDATA)>
-<!ELEMENT prix_vente_prod (#PCDATA)>
-<!ELEMENT qte_stock (#PCDATA)>
-<!ELEMENT date_peremption (#PCDATA)>
-<!ELEMENT date_appro (#PCDATA)>
-
-] >
+<!DOCTYPE stock SYSTEM "./Q7-DTD.dtd">
 
 <!-- XML Schema -->
 <stock>
@@ -36,10 +9,10 @@
         <mot def="MCD">MCD (modèle conceptuel des données)</mot>
         <mot def="MOCODO">MOCODO (Modélisation Conceptuelle de Données. Nickel. Ni souris.)</mot>
     </glossaire>
-    <categorie id_cat="1" lib_cat="Viande">
+    <categorie id_cat="cat_1" lib_cat="Viande">
         <!-- Produits -->
         <!-- prod 1 -->
-        <produit id_prod="1">
+        <produit id_prod="prod_1">
             <nom_prod>Filon de poulet</nom_prod>
             <descri_prod>
                 Bouts de poulet sous forme de saucisse
@@ -55,7 +28,7 @@
             <date_appro>11/04/2023</date_appro>
         </produit>
         <!-- prod 2 -->
-        <produit id_prod="2">
+        <produit id_prod="prod_2">
             <nom_prod>Jambon fumé</nom_prod>
             <descri_prod>
                 Tranches de jambon fumé aux bois de boulogne
