@@ -3,42 +3,32 @@
 <!DOCTYPE stock SYSTEM "./Q7-DTD.dtd">
 
 <!-- XML Schema -->
-<stock>
-    <categorie id_cat="cat_5" lib_cat="cosmetique">
-        <produit id_prod="prod_2">
-            <nom_prod>savon chat </nom_prod>
-            <descri_prod>
-                savon de bébé
-            </descri_prod>
-            <prix_achat_prod>20.34</prix_achat_prod>
-            <prix_vente_prod>55</prix_vente_prod>
-            <qte_stock>200</qte_stock>
-            <date_peremption>02/12/2029</date_peremption>
-            <date_appro>22/06/2023</date_appro>
-        </produit>
-        <produit id_prod="prod_4">
-            <nom_prod>crème clean</nom_prod>
-            <descri_prod>
-                crème pour le visage et les mains 
-                <glossaire auteur="Yama">
-                    <mot def="crème ">crème:mélange d’huiles, d’eau et d’émollients, La consistance est plus épaisse par rapport aux autres options</mot>
+<database>
+    <client id_client="23" >
+       
+            <nom_client>DAGOBERT </nom_client>
+            <prenom_client>DABERT </prenom_client>
+            <sexe_client>M</prenom_client>          
+    </client>
+    <client id_client="30" >
+       
+            <nom_client>DAGET </nom_client>
+            <prenom_client>DERT </prenom_client>
+            <sexe_client>F</prenom_client>          
+    </client>
 
-                </glossaire>
-            </descri_prod>
-            <prix_achat_prod>2.99</prix_achat_prod>
-            <prix_vente_prod>9.99</prix_vente_prod>
-            <qte_stock>7</qte_stock>
-            <date_peremption>04/11/2024</date_peremption>
-            <date_appro>01/02/2022</date_appro>
-        </produit>
-    </categorie>
-    <categorie id_cat="cat_12" lib_cat="produits surgélés">
-    </categorie>
+    <achat id_client="23"  id_produit="16">
+       
+            <qte_acheter>12</qte_acheter>
+            <prix_vente_actuel>55.99</prix_vente_actuel>
+                   
+    </achat>
+    <achat id_client="30"  id_produit="57">
+       
+            <qte_acheter>90</qte_acheter>
+            <prix_vente_actuel>20</prix_vente_actuel>
+         
+    </achat>
 
 
-
-
-
-
-
-</stock>
+</database>
