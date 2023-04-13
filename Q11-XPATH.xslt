@@ -5,9 +5,10 @@
 /descendant::glossaire[position()=1]
 <!-- c) pour les documents XML respectant la DTD en 7 : fournir les éléments <glossaire> n’ayant pas d’attribut auteur ; -->
 //glossaire[not(@auteur)]
-/descendant::glossaire[not(@auteur)]
+/descendant::glossaire[not(attribute::auteur)]
 <!-- d) pour vos documents XHTML : fournir les valeurs des attributs href ; -->
-//attribute::href
+//@href
 /descendant::*/attribute::href
 <!-- e) pour vos documents XHTML : compter le nombre d’images dans un document XHTML -->
-//img[count(self::node())]
+count(//img)
+count(/descendant::img)
