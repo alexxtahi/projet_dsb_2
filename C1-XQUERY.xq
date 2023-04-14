@@ -61,4 +61,4 @@ let $page := (
 )
 
 (:~ Écriture dans un fichier ~:)
-return file:write("./public_html/resultatC1.html", $page)
+return file:write("~/public_html/resultatC1.html", $page)
