@@ -4,351 +4,358 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Gestion des stocks</title>
-    <link rel="stylesheet" href="./Q10b-HTML.css" type="text/css" />
+  <title>Gestion des stocks</title>
+  <link rel="stylesheet" href="./Q10b-HTML.css" type="text/css" />
 </head>
 
 <body>
-    <div class="header">
-        <img class="header-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
-            alt="Icone de cartons" />
-        <h2>Gestion <br /> des stocks</h2>
+  <div class="header">
+    <img class="header-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+      alt="Icone de cartons" />
+    <h2>
+      Gestion <br />
+      des stocks
+    </h2>
+  </div>
+  <!-- Description des entités -->
+  <div class="description-group">
+    <h1>Description des entités</h1>
+    <img class="mcd-img-2" src="./img/mcd.png" alt="Image du MCD" />
+      <!-- Les entités -->
+    <div class="entity-description-group">
+      <!-- Catégorie -->
+      <div class="entity-description">
+        <h2>Catégorie</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_cat<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>lib_cat<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>100</td>
+              <td>Libellé de la catégorie</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Produit -->
+      <div class="entity-description">
+        <h2>Produit</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_prod<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>nom_prod<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>100</td>
+              <td>Nom du produit</td>
+            </tr>
+            <tr>
+              <td>descri_prod</td>
+              <td>VARCHAR</td>
+              <td>255</td>
+              <td>Description du produit</td>
+            </tr>
+            <tr>
+              <td>prix_achat_prod<span>*</span></td>
+              <td>DOUBLE</td>
+              <td></td>
+              <td>Prix d’achat HT du produit</td>
+            </tr>
+            <tr>
+              <td>prix_vente_prod<span>*</span></td>
+              <td>DOUBLE</td>
+              <td></td>
+              <td>Prix de vente HT du produit</td>
+            </tr>
+            <tr>
+              <td>qte_stock<span>*</span></td>
+              <td>INT</td>
+              <td>10</td>
+              <td>Quantité en stock</td>
+            </tr>
+            <tr>
+              <td>date_peremption</td>
+              <td>DATE</td>
+              <td></td>
+              <td>Prix de vente HT du produit</td>
+            </tr>
+            <tr>
+              <td>date_appro<span>*</span></td>
+              <td>DATE</td>
+              <td></td>
+              <td>Date d’approvisionnement la plus récente</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Client -->
+      <div class="entity-description">
+        <h2>Client</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_client<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>nom_client<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>40</td>
+              <td>Nom du client</td>
+            </tr>
+            <tr>
+              <td>prenom_client<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>40</td>
+              <td>Prénom du client</td>
+            </tr>
+            <tr>
+              <td>sexe_client<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>1</td>
+              <td>M (Masculin) ou F (Féminin)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Fournisseur -->
+      <div class="entity-description">
+        <h2>Fournisseur</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_fourn<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>nom_fourn<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>40</td>
+              <td>Nom du fournisseur</td>
+            </tr>
+            <tr>
+              <td>prenom_fourn<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>40</td>
+              <td>Prénom du client</td>
+            </tr>
+            <tr>
+              <td>sexe_fourn<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>1</td>
+              <td>M (Masculin) ou F (Féminin)</td>
+            </tr>
+            <tr>
+              <td>contact_fourn</td>
+              <td>VARCHAR</td>
+              <td>15</td>
+              <td>Numéro de téléphone du fournisseur</td>
+            </tr>
+            <tr>
+              <td>mail_fourn</td>
+              <td>VARCHAR</td>
+              <td>15</td>
+              <td>Adresse mail du fournisseur</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Promotion -->
+      <div class="entity-description">
+        <h2>Promotion</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_cat<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>lib_promo<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>100</td>
+              <td>Libellé de la promotion</td>
+            </tr>
+            <tr>
+              <td>pourcentage_reduction</td>
+              <td>DOUBLE</td>
+              <td></td>
+              <td>
+                Pourcentage de réduction sur les articles concernés par la
+                promotion
+              </td>
+            </tr>
+            <tr>
+              <td>date_debut<span>*</span></td>
+              <td>DATE</td>
+              <td></td>
+              <td>Date de début de la promotion</td>
+            </tr>
+            <tr>
+              <td>date_fin<span>*</span></td>
+              <td>DATE</td>
+              <td></td>
+              <td>Date de fin de la promotion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Don -->
+      <div class="entity-description">
+        <h2>Don</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_don<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>lib_don<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>100</td>
+              <td>Libellé du don</td>
+            </tr>
+            <tr>
+              <td>date_reception<span>*</span></td>
+              <td>DATE</td>
+              <td></td>
+              <td>Date de réception du don par une association</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Association -->
+      <div class="entity-description">
+        <h2>Association</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attributs</th>
+              <th>Type</th>
+              <th>Taille</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id_asso<span>*</span></td>
+              <td>INT</td>
+              <td>20</td>
+              <td>Clé primaire</td>
+            </tr>
+            <tr>
+              <td>nom_asso<span>*</span></td>
+              <td>VARCHAR</td>
+              <td>100</td>
+              <td>Nom de l’association</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <!-- Description des entités -->
-    <div class="description-group">
-        <h1>Description des entités</h1>
-        <img src="./img/mcd.png" alt="Image du MCD">
-        <div class="entity-description-group">
-            <!-- Catégorie -->
-            <div class="entity-description">
-                <h2>Catégorie</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_cat<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>lib_cat</td>
-                            <td>VARCHAR</td>
-                            <td>100</td>
-                            <td>Libellé de la catégorie</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <!-- Produit -->
-            <div class="entity-description">
-                <h2>Produit</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_prod<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>nom_prod</td>
-                            <td>VARCHAR</td>
-                            <td>100</td>
-                            <td>Nom du produit</td>
-                        </tr>
-                        <tr>
-                            <td>descri_prod</td>
-                            <td>VARCHAR</td>
-                            <td>255</td>
-                            <td>Description du produit</td>
-                        </tr>
-                        <tr>
-                            <td>prix_achat_prod</td>
-                            <td>DOUBLE</td>
-                            <td></td>
-                            <td>Prix d’achat HT du produit</td>
-                        </tr>
-                        <tr>
-                            <td>prix_vente_prodt</td>
-                            <td>DOUBLE</td>
-                            <td></td>
-                            <td>Prix de vente HT du produit</td>
-                        </tr>
-                        <tr>
-                            <td>qte_stock</td>
-                            <td>INT</td>
-                            <td>10</td>
-                            <td>Quantité en stock</td>
-                        </tr>
-                        <tr>
-                            <td>date_peremption</td>
-                            <td>DATE</td>
-                            <td></td>
-                            <td>Prix de vente HT du produit</td>
-                        </tr>
-                        <tr>
-                            <td>Date de péremption</td>
-                            <td>DATE</td>
-                            <td></td>
-                            <td>Date d’approvisionnement la plus récente
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Client -->
-            <div class="entity-description">
-                <h2>Client</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_client<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>nom_client</td>
-                            <td>VARCHAR</td>
-                            <td>40</td>
-                            <td>nom du client</td>
-                        </tr>
-                        <tr>
-                            <td>prenom_client<span>*</span></td>
-                            <td>VARCHAR</td>
-                            <td>40</td>
-                            <td>Prénom du client</td>
-                        </tr>
-                        <tr>
-                            <td>sexe_client</td>
-                            <td>VARCHAR</td>
-                            <td>1</td>
-                            <td>M (Masculin) ou F (Féminin)</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <!-- Fournisseur -->
-            <div class="entity-description">
-                <h2>Fournisseur</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_fourn<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>nom_fourn</td>
-                            <td>VARCHAR</td>
-                            <td>40</td>
-                            <td>nom du fournisseur</td>
-                        </tr>
-                        <tr>
-                            <td>prenom_fourn<span>*</span></td>
-                            <td>VARCHAR</td>
-                            <td>40</td>
-                            <td>Prénom du client</td>
-                        </tr>
-                        <tr>
-                            <td>sexe_fourn</td>
-                            <td>VARCHAR</td>
-                            <td>1</td>
-                            <td>M (Masculin) ou F (Féminin)</td>
-                        </tr>
-                        <tr>
-                            <td>contact_fourn<span>*</span></td>
-                            <td>VARCHAR</td>
-                            <td>15</td>
-                            <td>Numéro de téléphone du fournisseur</td>
-                        </tr>
-                        <tr>
-                            <td>mail_fourn</td>
-                            <td>VARCHAR</td>
-                            <td>15</td>
-                            <td>Adresse mail du fournisseur</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Promotion -->
-            <div class="entity-description">
-                <h2>Promotion</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_cat<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>lib_promo</td>
-                            <td>VARCHAR</td>
-                            <td>100</td>
-                            <td>Libellé de la promotion</td>
-                        </tr>
-                        <tr>
-                            <td>pourcentage_reduction</td>
-                            <td>DOUBLE</td>
-                            <td></td>
-                            <td>Pourcentage de réduction sur les articles concernés par la promotion
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>date_debut</td>
-                            <td>DATE</td>
-                            <td></td>
-                            <td>Date de début de la promotion</td>
-                        </tr>
-                        <tr>
-                            <td>date_fin</td>
-                            <td>DATE</td>
-                            <td></td>
-                            <td>Date de fin de la promotion
-
-                            </td>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Don -->
-            <div class="entity-description">
-                <h2>Don</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_don<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>lib_don</td>
-                            <td>VARCHAR</td>
-                            <td>100</td>
-                            <td>Libellé du don</td>
-                        </tr>
-                        <tr>
-                            <td>date_reception</td>
-                            <td>DATE</td>
-                            <td></td>
-                            <td>Date de réception du don par une association</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Association -->
-            <div class="entity-description">
-                <h2>Association</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Attributs</th>
-                            <th>Type</th>
-                            <th>Taille</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id_asso<span>*</span></td>
-                            <td>INT</td>
-                            <td>20</td>
-                            <td>Clé primaire</td>
-                        </tr>
-                        <tr>
-                            <td>nom_asso</td>
-                            <td>VARCHAR</td>
-                            <td>100</td>
-                            <td>Nom de l’association</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+  </div>
+  <div class="footer">
+    <div>
+      <div class="footer-title">
+        <img class="footer-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+          alt="Icone de cartons" />
+        <h1>
+          Gestion <br />
+          des stocks
+        </h1>
+      </div>
+      <h3 class="footer-subtitle">
+        Réalisé par <span>DIENG Yama Dior</span> et <span>TAHI Ezan</span>
+      </h3>
     </div>
-    <div class="footer">
-        <div>
-            <div class="footer-title">
-                <img class="footer-retail-icon" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
-                    alt="Icone de cartons" />
-                <h1>Gestion <br /> des stocks</h1>
-            </div>
-            <h3 class="footer-subtitle">Réalisé par <span>DIENG Yama Dior</span> et <span>TAHI Ezan</span></h3>
-        </div>
-        <div class="footer-elem">
-            <h2>Liens utiles</h2>
-            <ul>
-                <li><a href="./Q7-DTD.dtd">Q7-DTD.dtd</a></li>
-                <li><a href="./Q8a-XML.xml">Q8a-XML.xml</a></li>
-                <li><a href="./Q8b-XML.xml">Q8b-XML.xml</a></li>
-                <li><a href="https://validator.w3.org/">Validation XHTML</a></li>
-                <li><a href="https://jigsaw.w3.org/css-validator/">Validation CSS</a></li>
-            </ul>
-        </div>
-        <div class="footer-elem">
-            <h2>Mots de fin</h2>
-            <p>
-                Merci d'avoir visiter la page de présentation de notre projet DSB partie 2.
-            </p>
-        </div>
-        <img class="footer-retail-icon-2" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
-            alt="Icone de cartons" />
+    <div class="footer-elem">
+      <h2>Liens utiles</h2>
+      <ul>
+        <li><a href="./Q7-DTD.dtd">Q7-DTD.dtd</a></li>
+        <li><a href="./Q8a-XML.xml">Q8a-XML.xml</a></li>
+        <li><a href="./Q8b-XML.xml">Q8b-XML.xml</a></li>
+        <li><a href="https://validator.w3.org/">Validation XHTML</a></li>
+        <li>
+          <a href="https://jigsaw.w3.org/css-validator/">Validation CSS</a>
+        </li>
+      </ul>
     </div>
+    <div class="footer-elem">
+      <h2>Mots de fin</h2>
+      <p>
+        Merci d'avoir visiter la page de présentation de notre projet DSB
+        partie 2.
+      </p>
+    </div>
+    <img class="footer-retail-icon-2" src="https://cdn-icons-png.flaticon.com/512/1326/1326071.png"
+      alt="Icone de cartons" />
+  </div>
 </body>
 
 </html>

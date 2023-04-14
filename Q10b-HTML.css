@@ -20,7 +20,7 @@ body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        center / cover url("https://img.freepik.com/photos-gratuite/travailleur-afro-americain-ecrivant-liste-inventaire-tout-verifiant-stock-dans-salle-stockage_637285-4716.jpg?w=740&t=st=1681209824~exp=1681210424~hmac=8dc15eda309276a4b9bb2f484140f9df2ba183f3248bedc2786d457501774759") no-repeat;
+        center / cover url("./img/hero-pic.avif") no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -397,4 +397,10 @@ body {
 .xpath-test img {
     width: 60vw;
     height: auto;
+}
+
+.mcd-img-2 {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }

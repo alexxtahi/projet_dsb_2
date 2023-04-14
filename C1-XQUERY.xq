@@ -11,52 +11,54 @@ let $categories := $stock/categorie
 let $page := (
   <html>
     <head>
+      <title>Gestion des stocks</title>
       <link rel="stylesheet" type="text/css" href="{$stylePath}" />
     </head>
     <body>
-      <h1>Stock dun supermarché</h1>
-      <ul>
+      <h1>Résultat C1</h1>
+      {
+        if ($glossaire) then
+          <div>
+            <h2>Glossaire</h2>
+            {
+              if ($glossaire/@auteur) then
+                <i>Réalisé par { string($glossaire/@auteur) }</i>
+            }
+            {
+              for $mot in $glossaire/mot
+              return
+                <li>
+                  { string($mot/@def) } : {$mot[text()]}
+                </li>
+            }
+          </div>
+      }
+      <div>
+        <h2>Catégories de produits</h2>
         {
           for $categorie in $categories
           return
-            <li>
-              { $categorie/@lib_cat }
-              <ul>
+            <div>
+              <h3>Catégorie { string($categorie/@lib_cat) }</h3>
                 {
                   for $produit in $categorie/produit
                   return
-                    <li>
-                      { $produit/nom_prod }
-                      <ul>
-                        <li>Description : { $produit/descri_prod }</li>
-                        <li>Prix dachat : { $produit/prix_achat_prod }</li>
-                        <li>Prix de vente : { $produit/prix_vente_prod }</li>
-                        <li>Quantité en stock : { $produit/qte_stock }</li>
-                        <li>Date de péremption : { $produit/date_peremption }</li>
-                        <li>Date dapprovisionnement : { $produit/date_appro }</li>
-                      </ul>
-                    </li>
+                   <ul>
+                    <strong>{ $produit/nom_prod }</strong>
+                    <li>Description : { $produit/descri_prod }</li>
+                    <li>Prix dachat : { $produit/prix_achat_prod }</li>
+                    <li>Prix de vente : { $produit/prix_vente_prod }</li>
+                    <li>Quantité en stock : { $produit/qte_stock }</li>
+                    <li>Date de péremption : { $produit/date_peremption }</li>
+                    <li>Date dapprovisionnement : { $produit/date_appro }</li>
+                   </ul>
                 }
-              </ul>
-            </li>
+            </div>
         }
-      </ul>
-      <h2>Glossaire</h2>
-      <ul>
-        {
-          for $mot in $glossaire/mot
-          return
-            <li>
-              { $mot/@def }
-              <ul>
-                <li>Auteur : { $glossaire/@auteur }</li>
-              </ul>
-            </li>
-        }
-      </ul>
+        </div>
     </body>
   </html>
 )
 
 (:~ Écriture dans un fichier ~:)
-return file:write("./pageWeb.html", $page)
+return file:write("./public_html/resultatC1.html", $page)

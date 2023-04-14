@@ -4,11 +4,10 @@
 
 <!-- XML Schema -->
 <stock>
-    <categorie id_cat="cat_7" lib_cat="Viande" >
+    <categorie id_cat="cat_7" lib_cat="Viande">
         <produit id_prod="prod_3">
             <nom_prod>Steak haché</nom_prod>
             <descri_prod>
-              
             </descri_prod>
             <prix_achat_prod>9</prix_achat_prod>
             <prix_vente_prod>13</prix_vente_prod>
@@ -18,22 +17,18 @@
         </produit>
         <produit id_prod="prod_7">
             <nom_prod>Saucisses suisses
-            
-            <glossaire auteur="Alex">
-            <mot def="saucisse suisse">saucisse suisse: La saucisse suisse, également connue sous le nom de "saucisse de cervelas", est une saucisse originaire de Suisse, un pays d'Europe centrale. Cette saucisse est généralement fabriquée à partir de viande de porc et de boeuf, ainsi que d'épices telles que le sel, le poivre et le paprika</mot>
-                   
-            </glossaire>
+                <glossaire auteur="Alex">
+                    <mot def="saucisse suisse">saucisse suisse: La saucisse suisse, également connue sous le nom de "saucisse de cervelas", est une saucisse originaire de Suisse, un pays d'Europe centrale. Cette saucisse est généralement fabriquée à partir de viande de porc et de boeuf, ainsi que d'épices telles que le sel, le poivre et le paprika</mot>
+                </glossaire>
             </nom_prod>
             <descri_prod>
               1kg de bonne viande suisse
             </descri_prod>
-            
             <prix_achat_prod>5.5</prix_achat_prod>
             <prix_vente_prod>10</prix_vente_prod>
             <qte_stock>14</qte_stock>
             <date_peremption>2023-06-20</date_peremption>
             <date_appro>2023-03-21</date_appro>
         </produit>
-</categorie>
-
+    </categorie>
 </stock>
